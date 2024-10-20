@@ -84,11 +84,14 @@ def predict(df: pd.DataFrame, dv, model):
   return y_pred
 
 # cross-validation
+print(f'Cross-validation with C={C}')
+print("===========================")
+
 kfold = KFold(n_splits=n_splits, shuffle=True, random_state=1)
 
 scores = []
 
-for train_idx, val_idx in kfold.split(df_train_full):
+for i, (train_idx, val_idx) in enumerate(kfold.split(df_train_full)):
   df_train = df_train_full.iloc[train_idx]
   df_val = df_train_full.iloc[val_idx]
 
@@ -99,13 +102,18 @@ for train_idx, val_idx in kfold.split(df_train_full):
   y_pred = predict(df_val, dv, model)
 
   auc = roc_auc_score(y_val, y_pred)
+  print(f'AUC on fold {i}: {auc}')
   scores.append(auc)
 
-print(f'C={C} {np.mean(scores):.3f} {np.std(scores):.3f}')
+print(f'C={C} AUC avg: {np.mean(scores):.3f} AUC std: {np.std(scores):.3f}')
 
+print(f'Training final model with C={C}')
+print("===============================")
 dv, model = train(df_train_full, y_train_full, C=C)
 y_pred = predict(df_test, dv, model)
+print(y_pred)
 
 # Saving the model
 with open(output_file, 'wb') as f_out:
   pickle.dump((dv, model), f_out)
+print(f"The model was saved to {output_file}")
