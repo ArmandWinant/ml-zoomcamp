@@ -5,11 +5,11 @@ from flask import Flask, request, jsonify
 dv = None
 model = None
 
-dv_input_file = 'model/dv.bin'
+dv_input_file = 'dv.bin'
 with open(dv_input_file, 'rb') as f_in:
   dv = pickle.load(f_in)
 
-model_input_file = 'model/model1.bin'
+model_input_file = 'model2.bin'
 with open(model_input_file, 'rb') as f_in:
   model = pickle.load(f_in)
 
