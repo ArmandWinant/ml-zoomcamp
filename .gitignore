@@ -162,6 +162,8 @@ cython_debug/
 #.idea/
 
 *.csv
-*.CDX
 *.DBF
 *.FPT
+*.CDX
+
+*.bin

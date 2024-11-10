@@ -1,2 +1,2 @@
 # ml-zoomcamp
-DataQuest Machine Learning Zoomcamp 2024
+DataTalksClub Machine Learning Zoomcamp 2024
