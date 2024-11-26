@@ -64,9 +64,12 @@ Out of all three models, the decision tree classifier had the highest accuracy s
 
 
 ### How to run
-1. Install pipenv from the terminal: `pip install pipenv`
-2. Run all the cells in `notebook.ipynb` to train models
-3. Train the final model from the terminal: `python train.py`
-4. Build the docker image from the terminal: `docker build -t zoomcamp-midterm .`
-5. Start the docker container from the terminal: `docker run -it --rm -p 9696:9696 zoomcamp-midterm:latest`
-6. In a different terminal windown, query the flask webservice: `python test-predict.py`
+
+1. Clone the repository: `git clone https://github.com/ArmandWinant/ml-zoomcamp.git`
+2. Navigate to the project root directory: `cd ml-zoomcamp/projects/midterm-project/`
+3. Install pipenv from the terminal: `pip install pipenv`
+4. Run all the cells in `notebook.ipynb` to train models
+5. Train the final model from the terminal: `python train.py`
+6. Build the docker image from the terminal: `docker build -t zoomcamp-midterm .`
+7. Start the docker container from the terminal: `docker run -it --rm -p 9696:9696 zoomcamp-midterm:latest`
+8. In a different terminal windown, query the flask webservice: `python test-predict.py`
