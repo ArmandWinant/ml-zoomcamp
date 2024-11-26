@@ -72,4 +72,4 @@ Out of all three models, the decision tree classifier had the highest accuracy s
 5. Train the final model from the terminal: `python train.py`
 6. Build the docker image from the terminal: `docker build -t zoomcamp-midterm .`
 7. Start the docker container from the terminal: `docker run -it --rm -p 9696:9696 zoomcamp-midterm:latest`
-8. In a different terminal windown, query the flask webservice: `python test-predict.py`
+8. In a different terminal window, query the flask webservice: `python test-predict.py`
