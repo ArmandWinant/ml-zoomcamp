@@ -1,0 +1,23 @@
+{
+  "sex": "F",
+  "age": 57,
+  "leader": false,
+  "deputy": false,
+  "msolo": false,
+  "member_experience": 0,
+  "season": 1,
+  "host": 1,
+  "camps": 4,
+  "rope": 600,
+  "totmembers": 11,
+  "smtmembers": 10,
+  "tothired": 20,
+  "smthired": 13,
+  "nohired": false,
+  "stdrte": true,
+  "comrte": true,
+  "agency_experience": 94,
+  "heightm": 8849,
+  "himal": 12,
+  "region": 2
+}
